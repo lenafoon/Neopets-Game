@@ -20,3 +20,25 @@ const doughnutfruitsData = [
 const dungData = [
     {name: 'Dung', imageSrc: 'Dung.webp', isGood: false}
 ]
+
+class Game {
+    // code to be added
+    constructor() {
+        this.startScreen = document.getElementById("start-screen");
+        this.gameScreen = document.getElementById("game-screen");
+        this.gameEndScreen = document.getElementById("game-over-screen")
+        this.player = new Player(
+            this.gameScreen,
+            200,
+            500,
+            100,
+            150,
+            "./images/car.png");
+        this.height = 600;
+        this.width = 500;
+        this.obstacles = [];
+        this.score = 0;
+        this.gameIsOver = false;
+
+    }
+}
