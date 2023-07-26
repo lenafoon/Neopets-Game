@@ -22,7 +22,6 @@ const dungData = [
 ]
 
 class Game {
-    // code to be added
     constructor() {
         this.startScreen = document.getElementById("start-screen");
         this.gameScreen = document.getElementById("game-screen");
