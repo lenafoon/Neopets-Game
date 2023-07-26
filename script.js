@@ -1,22 +1,22 @@
 const doughnutfruitsData = [
-    {name: 'Blue-Doughnutfruit' , imageSrc: '', pointValue: 1, isGood: true},
-    {name: 'Green-Doughnutfruit' , imageSrc: '', pointValue: 1, isGood: true},
-    {name: 'Purple-Doughnutfruit' , imageSrc: '', pointValue: 1, isGood: true},
-    {name: 'Yellow-Doughnutfruit' , imageSrc: '', pointValue: 1, isGood: true},
-    {name: 'Grey-Doughnutfruit' , imageSrc: '', pointValue: 1, isGood: true},
-    {name: 'Checkered-Doughnutfruit' , imageSrc: '', pointValue: 2, isGood: true},
-    {name: 'Grilled-Doughnutfruit' , imageSrc: '', pointValue: 2, isGood: true},
-    {name: 'Fish-Doughnutfruit' , imageSrc: '', pointValue: 2, isGood: true},
-    {name: 'Fire-Doughnutfruit' , imageSrc: '', pointValue: 2, isGood: true},
-    {name: 'Ice-Doughnutfruit' , imageSrc: '', pointValue: 2, isGood: true},
-    {name: 'Sponge-Doughnutfruit' , imageSrc: '', pointValue: 2, isGood: true},
-    {name: 'Tropical-Doughnutfruit' , imageSrc: '', pointValue: 2, isGood: true},
-    {name: 'Silver-Doughnutfruit' , imageSrc: '', pointValue: 5, isGood: true},
-    {name: 'Gold-Doughnutfruit' , imageSrc: '', pointValue: 10, isGood: true},
-    {name: 'Rainbow-Doughnutfruit' , imageSrc: '', pointValue: 20, isGood: true}
+    {name: 'Blue-Doughnutfruit' , imageSrc: "Neopets-Doughnutfruits\foo_doughnutfruit_blue.gif", pointValue: 1, isGood: true},
+    {name: 'Green-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\foo_doughnutfruit_green.gif', pointValue: 1, isGood: true},
+    {name: 'Purple-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\foo_doughnutfruit_purple.gif', pointValue: 1, isGood: true},
+    {name: 'Yellow-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\foo_doughnutfruit_yellow.gif', pointValue: 1, isGood: true},
+    {name: 'Grey-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\foo_grey_doughnutfruit.gif', pointValue: 1, isGood: true},
+    {name: 'Checkered-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\checkered_doughnutfruit.gif', pointValue: 2, isGood: true},
+    {name: 'Grilled-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\foo_grill_doughnutfruit.gif', pointValue: 2, isGood: true},
+    {name: 'Fish-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\foo_doughnutfruit_fish.gif', pointValue: 2, isGood: true},
+    {name: 'Fire-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\fire_doughnutfruit.gif', pointValue: 2, isGood: true},
+    {name: 'Ice-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\ice_doughnutfruit.gif', pointValue: 2, isGood: true},
+    {name: 'Sponge-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\sponge_doughnutfruit.gif', pointValue: 2, isGood: true},
+    {name: 'Tropical-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\tropical_donutfruit.gif', pointValue: 2, isGood: true},
+    {name: 'Silver-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\foo_doughnutfruit_silver.gif', pointValue: 5, isGood: true},
+    {name: 'Gold-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\foo_doughnutfruit_gold.gif', pointValue: 10, isGood: true},
+    {name: 'Rainbow-Doughnutfruit' , imageSrc: 'Neopets-Doughnutfruits\foo_doughnutfruit_rainbow.gif', pointValue: 20, isGood: true}
 
 ]
 
 const dungData = [
-    {name: 'Dung', imageSrc: '', isGood: false}
+    {name: 'Dung', imageSrc: 'Dung.webp', isGood: false}
 ]
