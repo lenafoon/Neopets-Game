@@ -17,7 +17,7 @@ body {
   max-width: 500px;
   margin: 0 auto;
   position: relative;
-  /* display: none; */
+  display: none;
 }
 .intro-container {
   position: relative;
@@ -72,7 +72,7 @@ body {
 #inGame-container {
   position: relative;
   width: 100%;
-  display: none;
+  /* display: none; */
   max-width: 500px;
   margin: 0 auto;
 }
