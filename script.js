@@ -16,3 +16,7 @@ const doughnutfruitsData = [
     {name: 'Rainbow-Doughnutfruit' , imageSrc: '', pointValue: 20, isGood: true}
 
 ]
+
+const dungData = [
+    {name: 'Dung', imageSrc: '', isGood: false}
+]
