@@ -84,6 +84,12 @@ body {
   height: 660px;
   border: 2px solid black;
 }
-.haseeCharacter {
-  width: 25%;
+#player-hasee {
+  width: 80px;
+  height: 110px;
+  position: absolute;
+  bottom: 10px;
+  left: calc(250px - 40px);
+  background-image: url("/Neopets-Doughnutfruits/haseeCharacter.png");
+  background-size: contain;
 }
