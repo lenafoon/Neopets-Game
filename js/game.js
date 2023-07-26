@@ -1,7 +1,7 @@
 const doughnutfruitsData = [
   {
     name: "Blue-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits\foo_doughnutfruit_blue.gif",
+    imageSrc: "Neopets-Doughnutfruits/foo_doughnutfruit_blue.gif",
     pointValue: 1,
     isGood: true,
   },
