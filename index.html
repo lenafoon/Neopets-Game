@@ -3,38 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/style/styles.css" />
     <title>Doughnutfruit Catcher</title>
-</head>
+  </head>
+  <body>
+    <div id="intro-screen">
+      <div class="intro-container">
+        <img class="neo-title" src="/Neopets-Doughnutfruits/bestTitle.png" />
+        <img
+          class="intro-image"
+          src="/Neopets-Doughnutfruits/introUpdated.png"
+        />
+        <button class="start-game-btn">Start Game</button>
+        <button class="high-score">High-Score</button>
+        <!-- <span>SCORE</span> -->
+      </div>
+    </div>
+    <div>
+      <div id="inGame-container">
+        <img
+          class="haseeCharacter"
+          src="/Neopets-Doughnutfruits/haseeCharacter.png"
+          <img
+          class="neo-title"
+          src="/Neopets-Doughnutfruits/bestTitle.png"
+        />
+        <img class="inGame-img" src="/Neopets-Doughnutfruits/inGameImage.png" />
+      </div>
+    </div>
+    <div id="game-over"></div>
 
-
-<body>
-  <div class = "start-screen">
-
-    <h1>Doughnutfruit Catcher</h1>
-
-    <button id="start-btn">START</button>
-
-  </div>
-
-
-  <div class = "game-screen">
-
-    <div id="score">Score: 0</div>
-
-  </div>
-
-
-  <div class = "game-over-screen">
-
-    <h1>GAME OVER</h1>
-
-    <p>Your Score: <span id="final-score">0</span></p>
-
-    <button id="restart"> Restart Game</button>
-
-  </div>
-
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/game.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/player.js"></script>
+    <script src="/js/game.js"></script>
   </body>
 </html>
