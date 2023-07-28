@@ -5,6 +5,7 @@
 }
 body {
   background-color: rgb(180, 186, 201);
+  font-family: "Monserrat";
   width: 100vw;
   margin: 0;
   display: flex;
@@ -33,8 +34,13 @@ body {
   display: flex;
 }
 .start-game-btn {
-  font-size: 22px;
-  background-color: rgb(226, 161, 41);
+  font-size: 20px;
+  font-family: "Montserrat";
+  background-image: linear-gradient(
+    45deg,
+    rgba(251, 206, 6, 0.995),
+    rgba(98, 0, 255, 0.815)
+  );
   position: absolute;
   bottom: 20px;
   left: 1px;
@@ -43,11 +49,17 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  border: 2px solid green;
-  transition: all 0.5s;
+  border: 2px solid rgb(244, 245, 244);
+  transition: all 0.8s;
 }
 .high-score {
-  font-size: 22px;
+  font-size: 20px;
+  font-family: "Montserrat";
+  background-image: linear-gradient(
+    45deg,
+    rgba(98, 0, 255, 0.815),
+    rgba(251, 206, 6, 0.995)
+  );
   background-color: rgb(180, 58, 180);
   position: absolute;
   bottom: 20px;
@@ -57,21 +69,29 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  border: 2px solid green;
-  transition: all 0.5s;
+  border: 2px solid rgb(248, 251, 248);
+  transition: all 0.8s;
 }
 
 .high-score:hover {
-  background-color: rgb(255, 166, 0);
+  background-image: linear-gradient(
+    45deg,
+    rgba(251, 206, 6, 0.995),
+    rgba(98, 0, 255, 0.815)
+  );
   color: rgb(255, 255, 255);
   /* font-size: 24px; */
 }
 .start-game-btn:hover {
-  background-color: rgb(128, 42, 128);
+  background-image: linear-gradient(
+    45deg,
+    rgba(98, 0, 255, 0.815),
+    rgba(251, 206, 6, 0.995)
+  );
   color: rgb(255, 255, 255);
   /* font-size: 24px;  */
 }
-
+/* //////////IN GAME//////////////// */
 #inGame-container {
   position: relative;
   width: 100%;
@@ -85,11 +105,139 @@ body {
   border: 2px solid black;
 }
 #player-hasee {
-  width: 80px;
-  height: 110px;
-  position: absolute;
-  bottom: 10px;
-  left: calc(250px - 40px);
+  /* width: 80px;
+  height: 110px; */
+  /* position: absolute; */
+  /* bottom: 10px; */
+  left: 210px;
   background-image: url("/Neopets-Doughnutfruits/haseeCharacter.png");
   background-size: contain;
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.275);
+}
+
+.neopoints {
+  width: 50px;
+  height: 50px;
+  background-image: url("/Neopets-Doughnutfruits/neopoints.webp");
+  background-size: cover;
+  position: absolute;
+  bottom: 600px;
+  left: 500px;
+}
+.points {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 505px;
+  top: 250px;
+  font-size: 22px;
+  color: green;
+}
+.h-score {
+  position: absolute;
+  left: 505px;
+  top: 290px;
+  font-size: 22px;
+  color: rgb(65, 22, 218);
+}
+.point {
+  color: rgb(215, 44, 44);
+}
+
+/* /////////SCORE-SCREEN////////// */
+
+#score-screen {
+  margin-top: 186px;
+  background-image: url("/Neopets-Doughnutfruits/neopetsScore.png");
+  background-image: linear-gradient(
+      45deg,
+      rgba(98, 0, 255, 0.815),
+      rgba(251, 206, 6, 0.995)
+    ),
+    url("/Neopets-Doughnutfruits/neopetsScore.png");
+
+  background-size: contain;
+
+  width: 496px;
+  height: 656px;
+  border: 2px solid black;
+  display: none;
+  position: relative;
+}
+h1 {
+  font-size: 48px;
+  font-family: "Montserrat";
+  color: rgb(254, 252, 252);
+  text-align: center;
+  padding-top: 80px;
+}
+.table {
+  font-size: 42px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  color: rgb(5, 5, 5);
+  font-family: "Montserrat";
+}
+.tb-header {
+  padding-right: 50px;
+  text-align: center;
+}
+.tb-name {
+  color: gold;
+  font-family: "Montserrat";
+}
+.tb-points {
+  color: gold;
+  font-family: "Montserrat";
+  text-align: center;
+}
+.back-btn {
+  font-size: 22px;
+  background-color: rgb(226, 161, 41);
+  background-image: linear-gradient(
+    45deg,
+    rgba(251, 206, 6, 0.995),
+    rgba(98, 0, 255, 0.815)
+  );
+  font-family: "Montserrat";
+  position: absolute;
+  bottom: 20px;
+
+  padding: 5px 30px;
+  left: 175px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid rgb(255, 255, 255);
+  transition: all 0.5s;
+}
+.back-btn:hover {
+  background-image: linear-gradient(
+    45deg,
+    rgba(98, 0, 255, 0.815),
+    rgba(251, 206, 6, 0.995)
+  );
+  background-color: gold;
+  color: rgb(255, 255, 255);
+  /* font-size: 24px;  */
+}
+.score-title {
+  position: absolute;
+  top: -185px;
+}
+
+/* /////////Sound/////// */
+#music {
+  display: none;
+}
+.sound-on,
+.sound-off {
+  position: absolute;
+  width: 30px;
+  bottom: 80px;
+  right: 10px;
+  cursor: pointer;
+}
+.sound-on {
+  display: none;
 }
