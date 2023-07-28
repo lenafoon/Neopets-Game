@@ -20,22 +20,7 @@ const doughnutfruitsData = [
 const dungData = [{name: 'Dung', imageSrc: '/Neopets-Doughnutfruits/Dung.webp', isGood: false}]
 
 
-class Game {
-  // code to be added
-  constructor() {
-    this.w = 496;
-    this.h = 656;
-    this.inGameScreen = document.querySelector(".inGame-img");
-    this.inGameScreen.style.width = `${this.w}px`;
-    this.inGameScreen.style.height = `${this.h}px`;
-    this.fruit = [];
-    this.score = document.querySelector(".points");
-    this.isGameOver = false;
-    this.spawnFruitInterval = 1000;
-  }
 
-
-}
 
 class Game {
     constructor() {
@@ -44,7 +29,7 @@ class Game {
       this.inGameScreen = document.querySelector(".inGame-img");
       this.inGameScreen.style.width = `${this.w}px`;
       this.inGameScreen.style.height = `${this.h}px`;
-      this.player = new Player();
+   
       this.fruits = [];
       this.score = 0;
       this.isGameOver = false;
