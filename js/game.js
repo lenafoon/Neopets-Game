@@ -25,7 +25,7 @@ const doughnutfruitsData = [
   },
   {
     name: "Grey-Doughnutfruit",
-    imageSrc: "./../Neopets-Doughnutfruits/foo_grey_doughnutfruit.gif",
+    imageSrc: "Neopets-Doughnutfruits/foo_grey_doughnutfruit.gif",
     pointValue: 1,
     isGood: true,
   },
@@ -67,7 +67,7 @@ const doughnutfruitsData = [
   },
   {
     name: "Tropical-Doughnutfruit",
-    imageSrc: "/Neopets-Doughnutfruits/tropical_donutfruit.gif",
+    imageSrc: "Neopets-Doughnutfruits/tropical_donutfruit.gif",
     pointValue: 2,
     isGood: true,
   },
@@ -85,44 +85,49 @@ const doughnutfruitsData = [
   },
   {
     name: "Rainbow-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruitsfoo_doughnutfruit_rainbow.gif",
+    imageSrc: "Neopets-Doughnutfruits/foo_doughnutfruit_rainbow.gif",
     pointValue: 20,
     isGood: true,
   },
 ];
- 
 
+const dungData = [
+  {
+    name: "Dung",
+    imageSrc: "/Neopets-Doughnutfruits/Dung.webp",
+    isGood: false,
+  },
+];
 
-
-const dungData = [{ name: "Dung", imageSrc: "Dung.webp", isGood: false }];
-
-/*class Doughnutfruit {
-  constructor(name, imageSrc, pointValue, isGood) {
-    this.name = name;
-    this.imageSrc = imageSrc;
-    this.pointValue = pointValue;
-    this.isGood = isGood;
-    this.speed = 2; 
+class Game {
+  // code to be added
+  constructor() {
+    this.w = 496;
+    this.h = 656;
+    this.inGameScreen = document.querySelector(".inGame-img");
+    this.inGameScreen.style.width = `${this.w}px`;
+    this.inGameScreen.style.height = `${this.h}px`;
+    this.fruit = [];
+    this.score = document.querySelector(".points");
+    this.isGameOver = false;
+    this.spawnFruitInterval = 1000;
   }
-}*/
-
-
-class Doughnutfruit {
-  constructor(name, imageSrc, pointValue, isGood) {
-    this.name = name;
-    this.imageSrc = imageSrc;
-    this.pointValue = pointValue;
-    this.isGood = isGood;
-    this.speed = this.calculateSpeed();
-    this.x = Math.random() * 760;
-    this.y = -50;
-    this.element = this.createImageElement();
+  startGame() {
+    this.gameIsOver = false;
+    this.score = 0;
+    this.fruit = [];
+    this.spawnFruitInterval();
+    this.gameLoop();
   }
-
-  calculateSpeed() {
-
-    return Math.floor(4 / this.pointValue) + 1;
+  spawnFruit() {
+    setInterval(() => {
+      if (!this.isGameOver) {
+        const randomFruit = Math.floor(
+          Math.random() * doughnutfruitsData.addEventListener
+        );
+        const fruit = new this.fruit(doughnutfruitsData[randomFruit]);
+        this.fruit.push(fruit);
+      }
+    });
   }
-
 }
-
