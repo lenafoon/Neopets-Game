@@ -116,32 +116,37 @@ body {
 }
 
 .neopoints {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background-image: url("/Neopets-Doughnutfruits/neopoints.webp");
   background-size: cover;
   position: absolute;
-  bottom: 600px;
-  left: 500px;
+  bottom: 630px;
+  left: 460px;
 }
 .points {
-  width: 200px;
-  height: 200px;
+  font-family: "Montserrat";
   position: absolute;
-  left: 505px;
-  top: 250px;
-  font-size: 22px;
-  color: green;
+  left: 440px;
+  bottom: 632px;
+  font-size: 18px;
+  color: rgb(251, 234, 3);
+  background-color: rgba(0, 0, 0, 0.411);
 }
 .h-score {
+  font-family: "Montserrat";
   position: absolute;
-  left: 505px;
-  top: 290px;
-  font-size: 22px;
-  color: rgb(65, 22, 218);
+  left: 5px;
+  bottom: 635px;
+  font-size: 18px;
+  color: rgba(248, 249, 249, 0.792);
+  font-weight: 800;
+  background-color: rgba(0, 0, 0, 0.246);
 }
 .point {
-  color: rgb(215, 44, 44);
+  font-family: "Montserrat";
+  font-size: 10;
+  color: rgb(78, 215, 44);
 }
 
 /* /////////SCORE-SCREEN////////// */

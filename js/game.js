@@ -20,40 +20,18 @@ const doughnutfruitsData = [
 const dungData = [{name: 'Dung', imageSrc: '/Neopets-Doughnutfruits/Dung.webp', isGood: false}]
 
 
-/*class Game {
+class Game {
+  // code to be added
   constructor() {
     this.w = 496;
     this.h = 656;
     this.inGameScreen = document.querySelector(".inGame-img");
     this.inGameScreen.style.width = `${this.w}px`;
     this.inGameScreen.style.height = `${this.h}px`;
-
-    // Create player and initialize the game
-    this.player = new Player();
-    this.isPlaying = false;
-    this.fruitInterval = null;
-    this.score = 0;
-    this.fruits = [];
-
-    // ... (Your other methods and properties) ...
-  }
-
-  startGame() {
-    this.isPlaying = true;
-    this.score = 0;
-    this.scoreDisplay.innerText = this.score;
-    this.gameOverDisplay.innerText = "";
-    this.gameOverDisplay.style.display = "none";
-    
-    // Start the fruit falling interval
-    this.fruitInterval = setInterval(() => {
-      if (this.isPlaying) {
-        this.createRandomFruit();
-      }
-    }, 2000); // Change the interval as per your preference
-
-    // Start the player movement
-    this.startPlayerMovement();
+    this.fruit = [];
+    this.score = document.querySelector(".points");
+    this.isGameOver = false;
+    this.spawnFruitInterval = 1000;
   }
 
 
@@ -132,4 +110,3 @@ handleCollision(fruit) {
 }
 //handle Input?
 }
-
