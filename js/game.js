@@ -35,7 +35,7 @@ class Game {
   }
 
 
-}*/
+}
 
 class Game {
     constructor() {
