@@ -151,7 +151,7 @@ class Game {
     this.fruits = [];
     this.score = 0;
     this.isGameOver = false;
-    this.spawnFruitsInterval = 2000;
+    this.spawnFruitsInterval = 100000;
   }
 
   startGame() {
@@ -177,7 +177,7 @@ class Game {
         );
         this.fruits.push(fruit);
       }
-    }, this.spawnFruitsInterval);
+    }, this.spawnFruitsInterval / 60);
   }
 
   gameLoop() {
@@ -192,7 +192,7 @@ class Game {
     this.player.update();
     this.fruits.forEach((fruit) => {
       fruit.element.style.top = `${fruit.y}px`;
-      fruit.y += 20;
+      fruit.y += 4;
     });
   }
 

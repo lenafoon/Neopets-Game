@@ -43,7 +43,7 @@ window.addEventListener(
         console.log(1);
         break;
       case "ArrowRight":
-        if (player.x < 410) {
+        if (player.x < 350) {
           player.x += 20;
         }
         console.log(2);
