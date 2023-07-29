@@ -13,21 +13,17 @@ class Player {
     this.dom.style.position = "absolute";
   }
 
-  update() {
+  update() {}
 
-  }
-
-  render() {
-
-  }
+  render() {}
 }
-
 
 const player = new Player();
 console.log(player);
 const update = () => {
   player.dom.style.left = `${player.x}px`;
   console.log(player.x);
+
   // requestAnimationFrame(update);
 };
 setInterval(update, 1000 / 30);
@@ -36,7 +32,7 @@ window.addEventListener(
   "keydown",
   (event) => {
     if (event.defaultPrevented) {
-      return; 
+      return;
     }
 
     switch (event.key) {
@@ -51,20 +47,17 @@ window.addEventListener(
           player.x += 20;
         }
         console.log(2);
-        
+
         break;
       case "Enter":
-        
         break;
       case "Escape":
-        
         location.reload();
         break;
       default:
-        return; 
+        return;
     }
 
-    
     event.preventDefault();
   },
   true
