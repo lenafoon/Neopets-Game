@@ -12,9 +12,17 @@ class Player {
 
     this.dom.style.position = "absolute";
   }
+
+  update() {
+
+  }
+
+  render() {
+
+  }
 }
 
-const game = new Game();
+
 const player = new Player();
 console.log(player);
 const update = () => {
@@ -28,7 +36,7 @@ window.addEventListener(
   "keydown",
   (event) => {
     if (event.defaultPrevented) {
-      return; // Do nothing if the event was already processed
+      return; 
     }
 
     switch (event.key) {
@@ -43,20 +51,20 @@ window.addEventListener(
           player.x += 20;
         }
         console.log(2);
-        // Do something for "right arrow" key press.
+        
         break;
       case "Enter":
-        // Do something for "enter" or "return" key press.
+        
         break;
       case "Escape":
-        // Do something for "esc" key press.
+        
         location.reload();
         break;
       default:
-        return; // Quit when this doesn't handle the key event.
+        return; 
     }
 
-    // Cancel the default action to avoid it being handled twice
+    
     event.preventDefault();
   },
   true
