@@ -12,7 +12,7 @@ class Doughnutfruit {
   }
 
   calculateSpeed() {
-    return Math.floor(8 / this.pointValue) + 1;
+    return Math.floor(1 / this.pointValue) ;
   }
 
   createImageElement() {
@@ -21,8 +21,8 @@ class Doughnutfruit {
     imgElement.alt = this.name;
     imgElement.className = "falling-fruit";
     imgElement.style.position = "absolute";
-    imgElement.style.width = "80px";
-    imgElement.style.height = "80px";
+    imgElement.style.width = "40px";
+    imgElement.style.height = "40px";
     imgElement.style.left = this.x + "px";
     imgElement.style.top = this.y + "px";
     document.getElementById("fruits").appendChild(imgElement);
@@ -35,98 +35,98 @@ class Doughnutfruit {
   }
 
   isOutOfBounds() {
-    return this.y > 656;
+    return this.y > this.player.y;
   }
 }
 
 const doughnutfruitsData = [
   {
     name: "Blue-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/foo_doughnutfruit_blue.gif",
+    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_blue_edited.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Green-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/foo_doughnutfruit_green.gif",
+    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_green-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Purple-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/foo_doughnutfruit_purple.gif",
+    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_purple-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Yellow-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/foo_doughnutfruit_yellow.gif",
+    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_yellow-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Grey-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/foo_grey_doughnutfruit.gif",
+    imageSrc: "/editedDoughnutfruits/foo_grey_doughnutfruit-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Checkered-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/checkered_doughnutfruit.gif",
+    imageSrc: "/editedDoughnutfruits/checkered_doughnutfruit_edited.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Grilled-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/foo_grill_doughnutfruit.gif",
+    imageSrc: "/editedDoughnutfruits/foo_grill_doughnutfruit-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Fish-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/foo_doughnutfruit_fish.gif",
+    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_fish-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Fire-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/fire_doughnutfruit.gif",
+    imageSrc: "/editedDoughnutfruits/fire_doughnutfruit_edited.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Ice-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/ice_doughnutfruit.gif",
+    imageSrc: "/editedDoughnutfruits/ice_doughnutfruit-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Sponge-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/sponge_doughnutfruit.gif",
+    imageSrc: "/editedDoughnutfruits/sponge_doughnutfruit-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Tropical-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/tropical_donutfruit.gif",
+    imageSrc: "/editedDoughnutfruits/tropical_donutfruit-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Silver-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/foo_doughnutfruit_silver.gif",
+    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_silver-removebg-preview.png",
     pointValue: 5,
     isGood: true,
   },
   {
     name: "Gold-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/foo_doughnutfruit_gold.gif",
+    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_gold-removebg-preview.png",
     pointValue: 10,
     isGood: true,
   },
   {
     name: "Rainbow-Doughnutfruit",
-    imageSrc: "Neopets-Doughnutfruits/foo_doughnutfruit_rainbow.gif",
+    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_rainbow-removebg-preview.png",
     pointValue: 20,
     isGood: true,
   },

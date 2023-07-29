@@ -1,7 +1,7 @@
 class Player {
   constructor() {
-    this.w = 80;
-    this.h = 110;
+    this.w = 140;
+    this.h = 170;
     this.x = 210;
     this.y = 10;
     this.dom = document.getElementById("player-hasee");
