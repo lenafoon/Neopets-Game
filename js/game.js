@@ -20,8 +20,6 @@ const doughnutfruitsData = [
 const dungData = [{name: 'Dung', imageSrc: '/Neopets-Doughnutfruits/Dung.webp', isGood: false}]
 
 
-
-
 class Game {
     constructor() {
       this.w = 496;
@@ -77,7 +75,6 @@ render() {
   this.fruits.forEach((fruit) => fruit.render());
 }
 
-checkCollision(player, fruit) {
   // figure out position/size, return true/false
 }
 
