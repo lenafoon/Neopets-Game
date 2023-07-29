@@ -12,10 +12,6 @@ class Player {
 
     this.dom.style.position = "absolute";
   }
-
-  update() {}
-
-  render() {}
 }
 
 const player = new Player();
@@ -37,13 +33,13 @@ window.addEventListener(
 
     switch (event.key) {
       case "ArrowLeft":
-        if (player.x > 8) {
+        if (player.x > -30) {
           player.x -= 20;
         }
         console.log(1);
         break;
       case "ArrowRight":
-        if (player.x < 350) {
+        if (player.x < 370) {
           player.x += 20;
         }
         console.log(2);

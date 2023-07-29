@@ -6,13 +6,13 @@ class Doughnutfruit {
     this.isGood = isGood;
     this.speed = this.calculateSpeed();
     this.x = Math.random() * (496 - 80);
-    this.y = 150;
+    this.y = 200;
     this.element = this.createImageElement();
     // this.fruits = fruits.style.top = `${fruit.y}px`;
   }
 
   calculateSpeed() {
-    return Math.floor(1 / this.pointValue) ;
+    return Math.floor(8 / this.pointValue) + 1;
   }
 
   createImageElement() {
@@ -28,15 +28,6 @@ class Doughnutfruit {
     document.getElementById("fruits").appendChild(imgElement);
     return imgElement;
   }
-
-  update() {
-    this.y += this.speed;
-    this.element.style.top = `${this.y}` + "px";
-  }
-
-  isOutOfBounds() {
-    return this.y > this.player.y;
-  }
 }
 
 const doughnutfruitsData = [
@@ -48,25 +39,29 @@ const doughnutfruitsData = [
   },
   {
     name: "Green-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_green-removebg-preview.png",
+    imageSrc:
+      "/editedDoughnutfruits/foo_doughnutfruit_green-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Purple-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_purple-removebg-preview.png",
+    imageSrc:
+      "/editedDoughnutfruits/foo_doughnutfruit_purple-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Yellow-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_yellow-removebg-preview.png",
+    imageSrc:
+      "/editedDoughnutfruits/foo_doughnutfruit_yellow-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Grey-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_grey_doughnutfruit-removebg-preview.png",
+    imageSrc:
+      "/editedDoughnutfruits/foo_grey_doughnutfruit-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
@@ -78,13 +73,15 @@ const doughnutfruitsData = [
   },
   {
     name: "Grilled-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_grill_doughnutfruit-removebg-preview.png",
+    imageSrc:
+      "/editedDoughnutfruits/foo_grill_doughnutfruit-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Fish-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_fish-removebg-preview.png",
+    imageSrc:
+      "/editedDoughnutfruits/foo_doughnutfruit_fish-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
@@ -114,19 +111,22 @@ const doughnutfruitsData = [
   },
   {
     name: "Silver-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_silver-removebg-preview.png",
+    imageSrc:
+      "/editedDoughnutfruits/foo_doughnutfruit_silver-removebg-preview.png",
     pointValue: 5,
     isGood: true,
   },
   {
     name: "Gold-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_gold-removebg-preview.png",
+    imageSrc:
+      "/editedDoughnutfruits/foo_doughnutfruit_gold-removebg-preview.png",
     pointValue: 10,
     isGood: true,
   },
   {
     name: "Rainbow-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_rainbow-removebg-preview.png",
+    imageSrc:
+      "/editedDoughnutfruits/foo_doughnutfruit_rainbow-removebg-preview.png",
     pointValue: 20,
     isGood: true,
   },
@@ -183,26 +183,36 @@ class Game {
   gameLoop() {
     if (!this.gameIsOver) {
       this.update();
-      this.render();
+      console.log(fruits);
+
       requestAnimationFrame(() => this.gameLoop());
     }
   }
 
+  isOutOfBounds(fruit) {
+    console.log(this.h);
+    return fruit.y > 810;
+  }
+  handleOutofBounds(fruit) {
+    const indexes = this.fruits.indexOf(fruit);
+    if (indexes > -1) {
+      fruit.element.remove();
+      this.fruits.splice(indexes, 1);
+    }
+  }
+  catchedFruit(fruit) {}
   update() {
-    this.player.update();
     this.fruits.forEach((fruit) => {
       fruit.element.style.top = `${fruit.y}px`;
       fruit.y += 4;
+
+      if (this.isOutOfBounds(fruit)) {
+        this.handleOutofBounds(fruit);
+      }
+      // console.log(fruit);
     });
   }
 
-  render() {
-    this.player.render();
-
-    // this.fruits.forEach((fruit) => fruit.render());
-  }
-
-  // figure out position/size, return true/false
   checkCollision(player, fruit) {
     const playerRect = player.dom.getBoundingClientRect();
     const fruitRect = fruit.dom.getBoundingClientRect();
@@ -226,5 +236,4 @@ class Game {
       this.fruits.splice(index, 1);
     }
   }
-  //handle Input?
 }

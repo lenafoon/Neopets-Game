@@ -249,8 +249,9 @@ h1 {
 
 .falling-fruit {
   position: absolute;
-  width: 80px;
-  height: 80px;
-  top: 100px; 
+  width: 40px;
+  height: 40px;
+  top: 100px;
+
   /* Add any other styling you need for the fruits */
 }
