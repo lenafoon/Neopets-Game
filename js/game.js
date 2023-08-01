@@ -150,7 +150,10 @@ class Game {
     this.score = 0;
     this.isGameOver = false;
     this.spawnFruitsInterval = 100000;
+    this.baseFruitSpeed = 4;
+    this.fruitSpeedIncrease = 0.5;
   }
+
 
   startGame() {
     this.gameIsOver = false;
@@ -160,7 +163,9 @@ class Game {
     this.gameLoop();
   }
 
+
   spawnFruits() {
+    
     setInterval(() => {
       if (!this.isGameOver) {
         const randomFruitIndex = Math.floor(
@@ -178,6 +183,18 @@ class Game {
     }, this.spawnFruitsInterval / 60);
   }
 
+
+  calculateSpeed() {
+    return Math.floor(8 / this.pointValue) + 1;
+  }
+
+
+  calculateFruitSpeed() {
+    const speedIncreaseFactor = Math.floor(this.score / 15);
+    return this.baseFruitSpeed + speedIncreaseFactor * this.fruitSpeedIncrease;
+  }
+
+
   gameLoop() {
     if (!this.isGameOver) {
       this.update();
@@ -187,10 +204,13 @@ class Game {
     }
   }
 
+
   isOutOfBounds(fruit) {
     console.log(this.h);
     return fruit.y > 810;
   }
+
+
   handleOutofBounds(fruit) {
     const indexes = this.fruits.indexOf(fruit);
     if (indexes > -1) {
@@ -198,6 +218,8 @@ class Game {
       this.fruits.splice(indexes, 1);
     }
   }
+
+
   catchFruit(fruit) {
     const playerRect = this.player.dom.getBoundingClientRect();
     const fruitRect = fruit.element.getBoundingClientRect();
@@ -217,7 +239,6 @@ class Game {
   }
 
 
-  
   overlaps(rect1, rect2) {
     const isInHoriztonalBounds =
       rect1.x < rect2.x + rect2.width && rect1.x + rect1.width > rect2.x;
@@ -226,10 +247,16 @@ class Game {
     const isOverlapping = isInHoriztonalBounds && isInVerticalBounds;
     return isOverlapping;
   }
+
+
+
   update() {
+
+    const currentFruitSpeed = this.calculateFruitSpeed();
+
     this.fruits.forEach((fruit) => {
       fruit.element.style.top = `${fruit.y}px`;
-      fruit.y += 4;
+      fruit.y += currentFruitSpeed;
 
       if (this.isOutOfBounds(fruit)) {
         this.handleOutofBounds(fruit);
@@ -240,8 +267,6 @@ class Game {
         if (index > -1) this.fruits.splice(index, 1);
       }
       
-    
-
       // console.log(fruit);
     });
   }
