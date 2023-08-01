@@ -23,8 +23,8 @@ class Doughnutfruit {
     imgElement.alt = this.name;
     imgElement.className = "falling-fruit";
     imgElement.style.position = "absolute";
-    imgElement.style.width = "40px";
-    imgElement.style.height = "40px";
+    imgElement.style.width = "47px";
+    imgElement.style.height = "47px";
     imgElement.style.left = this.x + "px";
     imgElement.style.top = this.y + "px";
     document.getElementById("fruits").appendChild(imgElement);
@@ -51,13 +51,6 @@ const doughnutfruitsData = [
     name: "Purple-Doughnutfruit",
     imageSrc:
       "/editedDoughnutfruits/foo_doughnutfruit_purple-removebg-preview.png",
-    pointValue: 1,
-    isGood: true,
-  },
-  {
-    name: "Yellow-Doughnutfruit",
-    imageSrc:
-      "/editedDoughnutfruits/foo_doughnutfruit_yellow-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
@@ -100,18 +93,7 @@ const doughnutfruitsData = [
     pointValue: 2,
     isGood: true,
   },
-  {
-    name: "Sponge-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/sponge_doughnutfruit-removebg-preview.png",
-    pointValue: 2,
-    isGood: true,
-  },
-  {
-    name: "Tropical-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/tropical_donutfruit-removebg-preview.png",
-    pointValue: 2,
-    isGood: true,
-  },
+  
   {
     name: "Silver-Doughnutfruit",
     imageSrc:
@@ -124,6 +106,41 @@ const doughnutfruitsData = [
     imageSrc:
       "/editedDoughnutfruits/foo_doughnutfruit_gold-removebg-preview.png",
     pointValue: 5,
+    isGood: true,
+  },
+  {
+    name: "Strawberry-Doughnutfruit",
+    imageSrc:
+      "/editedDoughnutfruits/foo_doughnutfruit_strawberry-removebg-preview.png",
+    pointValue: 2,
+    isGood: true,
+  },
+  {
+    name: "Cloud-Doughnutfruit",
+    imageSrc:
+      "/editedDoughnutfruits/tfo_ddY21_cloud_doughnutfruit-removebg-preview.png",
+    pointValue: 2,
+    isGood: true,
+  },
+  {
+    name: "Dung-Doughnutfruit",
+    imageSrc:
+      "/editedDoughnutfruits/tro_doughnutfruit_dung-removebg-preview.png",
+    pointValue: -5,
+    isGood: true,
+  },
+  {
+    name: "Pineapple-Doughnutfruit",
+    imageSrc:
+      "/editedDoughnutfruits/tro_doughnutfruit_pineapple-removebg-preview.png",
+    pointValue: 2,
+    isGood: true,
+  },
+  {
+    name: "Sprinkled-Doughnutfruit",
+    imageSrc:
+      "/editedDoughnutfruits/tro_doughnutfruit_sprinkled-removebg-preview.png",
+    pointValue: 2,
     isGood: true,
   },
   {
@@ -286,7 +303,7 @@ class Game {
     return isOverlapping;
   }
 
-  
+
   update() {
     const currentFruitSpeed = this.calculateFruitSpeed();
 
