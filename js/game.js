@@ -130,15 +130,13 @@ const doughnutfruitsData = [
     pointValue: 20,
     isGood: true,
   },
-];
-
-const dungData = [
   {
     name: "Dung",
     imageSrc: "/Neopets-Doughnutfruits/Dung.webp",
     isGood: false,
   },
 ];
+
 
 class Game {
   constructor() {
@@ -204,12 +202,22 @@ class Game {
     const playerRect = this.player.dom.getBoundingClientRect();
     const fruitRect = fruit.element.getBoundingClientRect();
     if (this.overlaps(playerRect, fruitRect)) {
-      console.log(" you got it !");
+      if (fruit.isGood) {
+        this.score += fruit.pointValue;
+        this.updateScoreDisplay();
+      } 
+      else {
+        this.isGameOver = true;
+      }
       return true;
-    } else {
+    } 
+    else {
       return false;
     }
   }
+
+
+  
   overlaps(rect1, rect2) {
     const isInHoriztonalBounds =
       rect1.x < rect2.x + rect2.width && rect1.x + rect1.width > rect2.x;
@@ -231,9 +239,15 @@ class Game {
         const index = this.fruits.indexOf(fruit);
         if (index > -1) this.fruits.splice(index, 1);
       }
+      
+    
 
       // console.log(fruit);
     });
+  }
+  updateScoreDisplay() {
+    const scoreDisplay = document.querySelector(".points");
+    scoreDisplay.textContent = this.score;
   }
 
   // checkCollision(player, fruit) {
@@ -248,15 +262,16 @@ class Game {
   //   );
   // }
 
-  // handleCollision(fruit) {
-  //   if (fruit.isGood) {
-  //     this.score += fruit.pointValue;
-  //   } else {
-  //     this.gameIsOver = true;
-  //   }
-  //   const index = this.fruits.indexOf(fruit);
-  //   if (index > -1) {
-  //     this.fruits.splice(index, 1);
-  //   }
-  // }
+   /*handleCollision(fruit) {
+     if (fruit.isGood) {
+      this.score += fruit.pointValue;
+    } else {
+      this.gameIsOver = true;
+    }
+    const index = this.fruits.indexOf(fruit);
+    if (index > -1) {
+       this.fruits.splice(index, 1);
+     }
+   }
+}*/
 }
