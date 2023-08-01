@@ -2,7 +2,7 @@ window.onload = function () {
   const music = document.getElementById("music");
   const soundBtn = document.querySelector(".sound-on");
   const soundOff = document.querySelector(".sound-off");
-  
+
   soundOff.addEventListener("click", function () {
     music.play();
     soundBtn.style.display = "block";
@@ -19,7 +19,7 @@ window.onload = function () {
 
   const highScoreScreen = document.querySelector(".high-score");
   const backBtn = document.querySelector(".back-btn");
-  
+
   highScoreScreen.addEventListener("click", function () {
     let scoreScreenToggle = document.getElementById("score-screen");
     let gameIntro = document.getElementById("intro-screen");
@@ -30,7 +30,6 @@ window.onload = function () {
   backBtn.addEventListener("click", function () {
     location.reload();
   });
-
 
   const game = new Game();
 

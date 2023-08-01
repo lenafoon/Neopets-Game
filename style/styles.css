@@ -255,3 +255,18 @@ h1 {
 
   /* Add any other styling you need for the fruits */
 }
+.title {
+  width: 260px;
+  bottom: 520px;
+  position: absolute;
+  border: 8px solid rgb(142, 62, 62);
+  border-radius: 8px;
+  right: 126px;
+  box-shadow: 5px 4px 5px 8px rgba(5, 5, 5, 0.809);
+  background-color: rgb(174, 162, 184);
+  background-image: linear-gradient(
+    45deg,
+    rgb(252, 252, 252),
+    rgb(63, 157, 152)
+  );
+}

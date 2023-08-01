@@ -137,7 +137,6 @@ const doughnutfruitsData = [
   },
 ];
 
-
 class Game {
   constructor() {
     this.w = 496;
@@ -154,7 +153,6 @@ class Game {
     this.fruitSpeedIncrease = 0.5;
   }
 
-
   startGame() {
     this.gameIsOver = false;
     this.score = 0;
@@ -163,9 +161,7 @@ class Game {
     this.gameLoop();
   }
 
-
   spawnFruits() {
-    
     setInterval(() => {
       if (!this.isGameOver) {
         const randomFruitIndex = Math.floor(
@@ -183,17 +179,14 @@ class Game {
     }, this.spawnFruitsInterval / 60);
   }
 
-
   calculateSpeed() {
     return Math.floor(8 / this.pointValue) + 1;
   }
-
 
   calculateFruitSpeed() {
     const speedIncreaseFactor = Math.floor(this.score / 15);
     return this.baseFruitSpeed + speedIncreaseFactor * this.fruitSpeedIncrease;
   }
-
 
   gameLoop() {
     if (!this.isGameOver) {
@@ -204,12 +197,10 @@ class Game {
     }
   }
 
-
   isOutOfBounds(fruit) {
     console.log(this.h);
     return fruit.y > 810;
   }
-
 
   handleOutofBounds(fruit) {
     const indexes = this.fruits.indexOf(fruit);
@@ -219,25 +210,24 @@ class Game {
     }
   }
 
-
   catchFruit(fruit) {
     const playerRect = this.player.dom.getBoundingClientRect();
     const fruitRect = fruit.element.getBoundingClientRect();
+    const bell = document.getElementById("bell");
+
     if (this.overlaps(playerRect, fruitRect)) {
       if (fruit.isGood) {
+        bell.play();
         this.score += fruit.pointValue;
         this.updateScoreDisplay();
-      } 
-      else {
+      } else {
         this.isGameOver = true;
       }
       return true;
-    } 
-    else {
+    } else {
       return false;
     }
   }
-
 
   overlaps(rect1, rect2) {
     const isInHoriztonalBounds =
@@ -248,10 +238,7 @@ class Game {
     return isOverlapping;
   }
 
-
-
   update() {
-
     const currentFruitSpeed = this.calculateFruitSpeed();
 
     this.fruits.forEach((fruit) => {
@@ -266,7 +253,7 @@ class Game {
         const index = this.fruits.indexOf(fruit);
         if (index > -1) this.fruits.splice(index, 1);
       }
-      
+
       // console.log(fruit);
     });
   }
@@ -287,7 +274,7 @@ class Game {
   //   );
   // }
 
-   /*handleCollision(fruit) {
+  /*handleCollision(fruit) {
      if (fruit.isGood) {
       this.score += fruit.pointValue;
     } else {
