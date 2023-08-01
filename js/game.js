@@ -181,9 +181,9 @@ class Game {
   }
 
   gameLoop() {
-    if (!this.gameIsOver) {
+    if (!this.isGameOver) {
       this.update();
-      console.log(fruits);
+      console.log(this.fruits);
 
       requestAnimationFrame(() => this.gameLoop());
     }
@@ -200,7 +200,24 @@ class Game {
       this.fruits.splice(indexes, 1);
     }
   }
-  catchedFruit(fruit) {}
+  catchFruit(fruit) {
+    const playerRect = this.player.dom.getBoundingClientRect();
+    const fruitRect = fruit.element.getBoundingClientRect();
+    if (this.overlaps(playerRect, fruitRect)) {
+      console.log(" you got it !");
+      return true;
+    } else {
+      return false;
+    }
+  }
+  overlaps(rect1, rect2) {
+    const isInHoriztonalBounds =
+      rect1.x < rect2.x + rect2.width && rect1.x + rect1.width > rect2.x;
+    const isInVerticalBounds =
+      rect1.y < rect2.y + rect2.height && rect1.y + rect1.height > rect2.y;
+    const isOverlapping = isInHoriztonalBounds && isInVerticalBounds;
+    return isOverlapping;
+  }
   update() {
     this.fruits.forEach((fruit) => {
       fruit.element.style.top = `${fruit.y}px`;
@@ -209,31 +226,37 @@ class Game {
       if (this.isOutOfBounds(fruit)) {
         this.handleOutofBounds(fruit);
       }
+      if (this.catchFruit(fruit)) {
+        fruit.element.remove();
+        const index = this.fruits.indexOf(fruit);
+        if (index > -1) this.fruits.splice(index, 1);
+      }
+
       // console.log(fruit);
     });
   }
 
-  checkCollision(player, fruit) {
-    const playerRect = player.dom.getBoundingClientRect();
-    const fruitRect = fruit.dom.getBoundingClientRect();
+  // checkCollision(player, fruit) {
+  //   const playerRect = player.dom.getBoundingClientRect();
+  //   const fruitRect = fruit.dom.getBoundingClientRect();
 
-    return (
-      playerRect.left < fruitRect.right &&
-      playerRect.right > fruitRect.left &&
-      playerRect.top < fruitRect.bottom &&
-      playerRect.bottom > fruitRect.top
-    );
-  }
+  //   return (
+  //     playerRect.left < fruitRect.right &&
+  //     playerRect.right > fruitRect.left &&
+  //     playerRect.top < fruitRect.bottom &&
+  //     playerRect.bottom > fruitRect.top
+  //   );
+  // }
 
-  handleCollision(fruit) {
-    if (fruit.isGood) {
-      this.score += fruit.pointValue;
-    } else {
-      this.gameIsOver = true;
-    }
-    const index = this.fruits.indexOf(fruit);
-    if (index > -1) {
-      this.fruits.splice(index, 1);
-    }
-  }
+  // handleCollision(fruit) {
+  //   if (fruit.isGood) {
+  //     this.score += fruit.pointValue;
+  //   } else {
+  //     this.gameIsOver = true;
+  //   }
+  //   const index = this.fruits.indexOf(fruit);
+  //   if (index > -1) {
+  //     this.fruits.splice(index, 1);
+  //   }
+  // }
 }
