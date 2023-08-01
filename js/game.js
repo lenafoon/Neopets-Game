@@ -11,9 +11,11 @@ class Doughnutfruit {
     // this.fruits = fruits.style.top = `${fruit.y}px`;
   }
 
+
   calculateSpeed() {
     return Math.floor(8 / this.pointValue) + 1;
   }
+
 
   createImageElement() {
     const imgElement = document.createElement("img");
@@ -29,6 +31,7 @@ class Doughnutfruit {
     return imgElement;
   }
 }
+
 
 const doughnutfruitsData = [
   {
@@ -113,21 +116,21 @@ const doughnutfruitsData = [
     name: "Silver-Doughnutfruit",
     imageSrc:
       "/editedDoughnutfruits/foo_doughnutfruit_silver-removebg-preview.png",
-    pointValue: 5,
+    pointValue: 3,
     isGood: true,
   },
   {
     name: "Gold-Doughnutfruit",
     imageSrc:
       "/editedDoughnutfruits/foo_doughnutfruit_gold-removebg-preview.png",
-    pointValue: 10,
+    pointValue: 5,
     isGood: true,
   },
   {
     name: "Rainbow-Doughnutfruit",
     imageSrc:
       "/editedDoughnutfruits/foo_doughnutfruit_rainbow-removebg-preview.png",
-    pointValue: 20,
+    pointValue: 10,
     isGood: true,
   },
   {
@@ -136,6 +139,7 @@ const doughnutfruitsData = [
     isGood: false,
   },
 ];
+
 
 class Game {
   constructor() {
@@ -148,26 +152,41 @@ class Game {
     this.fruits = [];
     this.score = 0;
     this.isGameOver = false;
+
     this.spawnFruitsInterval = 100000;
     this.baseFruitSpeed = 4;
     this.fruitSpeedIncrease = 0.5;
   }
 
+
   startGame() {
     this.gameIsOver = false;
     this.score = 0;
     this.fruits = [];
+
+    this.spawnDelay = 2000; 
+    this.baseSpawnInterval = 2000; 
+    this.spawnInterval = this.baseSpawnInterval;
+    this.baseFruitSpeed = 4; 
+    this.maxSpeedIncrease = 2; 
+    this.fruitSpeed = this.baseFruitSpeed; 
+
     this.spawnFruits();
     this.gameLoop();
   }
 
+
   spawnFruits() {
-    setInterval(() => {
+    const maxFruitsToSpawn = 3; 
+
+    let fruitCounter = 0;
+  
+    const spawnNextFruit = () => {
       if (!this.isGameOver) {
-        const randomFruitIndex = Math.floor(
-          Math.random() * doughnutfruitsData.length
-        );
+        const randomFruitIndex = Math.floor(Math.random() * doughnutfruitsData.length);
+
         const randomFruitData = doughnutfruitsData[randomFruitIndex];
+
         const fruit = new Doughnutfruit(
           randomFruitData.name,
           randomFruitData.imageSrc,
@@ -176,17 +195,38 @@ class Game {
         );
         this.fruits.push(fruit);
       }
-    }, this.spawnFruitsInterval / 60);
+  
+      fruitCounter++;
+      if (fruitCounter >= maxFruitsToSpawn) {
+       
+        fruitCounter = 0;
+        const randomSpawnInterval = Math.random() * 1000 + 1000; 
+
+        setTimeout(() => {
+          this.spawnFruits();
+        }, randomSpawnInterval);
+      } 
+      else {
+        
+        const randomSpawnDelay = Math.random() * 500 + 500; 
+        setTimeout(spawnNextFruit, randomSpawnDelay);
+      }
+    };
+    spawnNextFruit();
   }
 
+  
   calculateSpeed() {
     return Math.floor(8 / this.pointValue) + 1;
   }
 
+
   calculateFruitSpeed() {
     const speedIncreaseFactor = Math.floor(this.score / 15);
+
     return this.baseFruitSpeed + speedIncreaseFactor * this.fruitSpeedIncrease;
   }
+
 
   gameLoop() {
     if (!this.isGameOver) {
@@ -197,10 +237,12 @@ class Game {
     }
   }
 
+
   isOutOfBounds(fruit) {
     console.log(this.h);
     return fruit.y > 810;
   }
+
 
   handleOutofBounds(fruit) {
     const indexes = this.fruits.indexOf(fruit);
@@ -210,9 +252,12 @@ class Game {
     }
   }
 
+
   catchFruit(fruit) {
     const playerRect = this.player.dom.getBoundingClientRect();
+
     const fruitRect = fruit.element.getBoundingClientRect();
+
     const bell = document.getElementById("bell");
 
     if (this.overlaps(playerRect, fruitRect)) {
@@ -229,15 +274,19 @@ class Game {
     }
   }
 
+
   overlaps(rect1, rect2) {
     const isInHoriztonalBounds =
       rect1.x < rect2.x + rect2.width && rect1.x + rect1.width > rect2.x;
+
     const isInVerticalBounds =
       rect1.y < rect2.y + rect2.height && rect1.y + rect1.height > rect2.y;
+
     const isOverlapping = isInHoriztonalBounds && isInVerticalBounds;
     return isOverlapping;
   }
 
+  
   update() {
     const currentFruitSpeed = this.calculateFruitSpeed();
 
@@ -251,12 +300,15 @@ class Game {
       if (this.catchFruit(fruit)) {
         fruit.element.remove();
         const index = this.fruits.indexOf(fruit);
+
         if (index > -1) this.fruits.splice(index, 1);
       }
 
       // console.log(fruit);
     });
   }
+
+
   updateScoreDisplay() {
     const scoreDisplay = document.querySelector(".points");
     scoreDisplay.textContent = this.score;
