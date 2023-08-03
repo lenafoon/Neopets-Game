@@ -127,7 +127,7 @@ body {
 .points {
   font-family: "Montserrat";
   position: absolute;
-  left: 440px;
+  left: 430px;
   bottom: 632px;
   font-size: 18px;
   color: rgb(251, 234, 3);
@@ -335,7 +335,7 @@ h1 {
   padding: 20px;
   border-radius: 8px;
   bottom: 300px;
-  right: 190px;
+  right: 205px;
   color: rgb(71, 255, 4);
   font-family: "Montserrat";
 }
