@@ -64,7 +64,7 @@ const doughnutfruitsData = [
   {
     name: "Dung-Doughnutfruit",
     imageSrc: "/editedDoughnutfruits/tro_doughnutfruit_dung-removebg-preview.png",
-    pointValue: -1,
+    pointValue: -10,
     isGood: true,
   },
   {
