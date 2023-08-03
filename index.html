@@ -23,6 +23,9 @@
       <audio id="bell">
         <source src="/audio/Swiss Bell Sound.mp3" type="audio/mpeg" />
       </audio>
+      <audio id="dung">
+        <source src="/audio/dungEffect.mp3" type="audio/mpeg" />
+      </audio>
       <div class="intro-container">
         <img class="neo-title" src="/Neopets-Doughnutfruits/bestTitle.png" />
         <img
@@ -73,7 +76,7 @@
           <section class="neopoints"></section>
           <section class="points">0</section>
           <section class="h-score">
-            Highest score <strong class="point">100</strong>
+            Highest score <span class="point">1</span>
           </section>
         </div>
       </div>
@@ -89,14 +92,14 @@
           <h1>Highest Score</h1>
           <table class="table">
             <tr>
-              <td class="tb-header">NAME</td>
+              <!-- < class="tb-header">NAME -->
 
               <td>SCORE</td>
             </tr>
             <tr>
-              <td class="tb-name">Leo</td>
+              <!-- <td class="tb-name">Leo</td> -->
 
-              <td class="tb-points">100</td>
+              <td class="tb-points">10</td>
             </tr>
           </table>
           <button class="back-btn">Back</button>
@@ -104,7 +107,14 @@
       </div>
     </div>
 
-    <div id="game-over"></div>
+    <div id="game-over">
+      <img class="neo-title" src="/Neopets-Doughnutfruits/bestTitle.png" />
+      <img class="cry" src="/editedDoughnutfruits/gameoverscreen.png" />
+      <h1 class="finished">GAME OVER</h1>
+      <h2 class="final-score">SCORE</h2>
+      <span class="final-score-num">200</span>
+      <button class="back-menu">MAIN MENU</button>
+    </div>
 
     <!-- <script src="/js/script.js"></script> -->
     <script src="/js/game.js"></script>

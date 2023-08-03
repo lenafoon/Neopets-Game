@@ -18,7 +18,7 @@ const player = new Player();
 console.log(player);
 const update = () => {
   player.dom.style.left = `${player.x}px`;
-  console.log(player.x);
+  //console.log(player.x);
 
   // requestAnimationFrame(update);
 };

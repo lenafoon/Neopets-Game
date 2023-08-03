@@ -270,3 +270,72 @@ h1 {
     rgb(63, 157, 152)
   );
 }
+#game-over {
+  display: none;
+  position: relative;
+}
+.cry {
+  width: 500px;
+  border-bottom: 2px solid black;
+}
+.finished {
+  position: relative;
+  text-align: center;
+  background-color: rgba(215, 29, 29, 0.969);
+  padding: 20px;
+  border-radius: 8px;
+  bottom: 550px;
+  font-family: "Montserrat";
+}
+.back-menu {
+  width: 500px;
+  padding: 20px;
+  position: absolute;
+  bottom: 45px;
+  border: 3px solid;
+  cursor: pointer;
+  background-image: linear-gradient(
+    45deg,
+    rgba(251, 206, 6, 0.995),
+    rgba(98, 0, 255, 0.815)
+  );
+  font-family: "Montserrat";
+  transition: all 0.5s;
+}
+.back-menu:hover {
+  background-image: linear-gradient(
+    45deg,
+    rgba(98, 0, 255, 0.815),
+    rgba(251, 206, 6, 0.995)
+  );
+  background-color: gold;
+  color: rgb(255, 255, 255);
+  /* font-size: 24px;  */
+}
+
+.final-score {
+  letter-spacing: 8px;
+  font-size: 40px;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(187, 196, 188, 0.086);
+  padding: 20px;
+  border-radius: 8px;
+  bottom: 350px;
+  right: 140px;
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat";
+}
+.final-score-num {
+  font-size: 48px;
+  font-weight: 800;
+  position: absolute;
+  text-align: center;
+  /* background-color: rgb(29, 215, 54); */
+  padding: 20px;
+  border-radius: 8px;
+  bottom: 300px;
+  right: 190px;
+  color: rgb(71, 255, 4);
+  font-family: "Montserrat";
+}
