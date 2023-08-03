@@ -21,8 +21,8 @@ class Doughnutfruit {
     imgElement.alt = this.name;
     imgElement.className = "falling-fruit";
     imgElement.style.position = "absolute";
-    imgElement.style.width = "40px";
-    imgElement.style.height = "40px";
+    imgElement.style.width = "47px";
+    imgElement.style.height = "47px";
     imgElement.style.left = this.x + "px";
     imgElement.style.top = this.y + "px";
     document.getElementById("fruits").appendChild(imgElement);
@@ -35,6 +35,48 @@ const doughnutfruitsData = [
     name: "Blue-Doughnutfruit",
     imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_blue_edited.png",
     pointValue: 1,
+    isGood: true,
+  },
+  {
+    name: "Cloud-Doughnutfruit",
+    imageSrc: "/editedDoughnutfruits/tfo_ddY21_cloud_doughnutfruit-removebg-preview.png",
+    pointValue: 2,
+    isGood: true,
+  },
+  {
+    name: "Coco-Doughnutfruit",
+    imageSrc: "/editedDoughnutfruits/can_doughnutfruit_choco-removebg-preview.png",
+    pointValue: 2,
+    isGood: true,
+  },
+  {
+    name: "Prickly-Doughnutfruit",
+    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_prickly-removebg-preview.png",
+    pointValue: 2,
+    isGood: true,
+  },
+  {
+    name: "Strawberry-Doughnutfruit",
+    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_strawberry-removebg-preview.png",
+    pointValue: 2,
+    isGood: true,
+  },
+  {
+    name: "Dung-Doughnutfruit",
+    imageSrc: "/editedDoughnutfruits/tro_doughnutfruit_dung-removebg-preview.png",
+    pointValue: -1,
+    isGood: true,
+  },
+  {
+    name: "Pineapple-Doughnutfruit",
+    imageSrc: "/editedDoughnutfruits/tro_doughnutfruit_pineapple-removebg-preview.png",
+    pointValue: 2,
+    isGood: true,
+  },
+  {
+    name: "Sprinkle-Doughnutfruit",
+    imageSrc: "/editedDoughnutfruits/tro_doughnutfruit_sprinkled-removebg-preview.png",
+    pointValue: 2,
     isGood: true,
   },
   {
@@ -113,21 +155,21 @@ const doughnutfruitsData = [
     name: "Silver-Doughnutfruit",
     imageSrc:
       "/editedDoughnutfruits/foo_doughnutfruit_silver-removebg-preview.png",
-    pointValue: 5,
+    pointValue: 3,
     isGood: true,
   },
   {
     name: "Gold-Doughnutfruit",
     imageSrc:
       "/editedDoughnutfruits/foo_doughnutfruit_gold-removebg-preview.png",
-    pointValue: 10,
+    pointValue: 5,
     isGood: true,
   },
   {
     name: "Rainbow-Doughnutfruit",
     imageSrc:
       "/editedDoughnutfruits/foo_doughnutfruit_rainbow-removebg-preview.png",
-    pointValue: 20,
+    pointValue: 10,
     isGood: true,
   },
   {
