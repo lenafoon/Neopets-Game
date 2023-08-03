@@ -292,6 +292,8 @@ class Game {
         gameOverScreen.style.display = "block";
         finalPoints.textContent = this.score;
         this.isGameOver = true;
+        getGamePoints.innerHTML = 0;
+
 
         clearInterval(this.loop);
         cancelAnimationFrame(this.animationFrame);
