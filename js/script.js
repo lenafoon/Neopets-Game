@@ -23,7 +23,7 @@ window.onload = function () {
     music.play();
     soundBtn.style.display = "block";
     soundOff.style.display = "none";
-    console.log(clicked);
+    
   });
 
   soundBtn.addEventListener("click", function () {

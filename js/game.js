@@ -207,7 +207,7 @@ class Game {
     this.isGameOver = false;
     this.spawnFruitsInterval = 100000;
     this.baseFruitSpeed = 5;
-    this.fruitSpeedIncrease = 0.5;
+    this.fruitSpeedIncrease = 2;
     this.loop = null;
     this.animationFrame = null;
   }
