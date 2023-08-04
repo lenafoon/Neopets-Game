@@ -110,7 +110,7 @@ body {
   /* position: absolute; */
   /* bottom: 10px; */
   left: 210px;
-  background-image: url("/editedDoughnutfruits/haseeAndBasket.png");
+  background-image: url("editedDoughnutfruits/haseeAndBasket.png");
   background-size: cover;
   box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.275);
 }
@@ -118,7 +118,7 @@ body {
 .neopoints {
   width: 30px;
   height: 30px;
-  background-image: url("/Neopets-Doughnutfruits/neopoints.webp");
+  background-image: url("Neopets-Doughnutfruits/neopoints.webp");
   background-size: contain;
   position: absolute;
   bottom: 630px;

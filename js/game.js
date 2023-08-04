@@ -33,163 +33,163 @@ class Doughnutfruit {
 const doughnutfruitsData = [
   {
     name: "Blue-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_blue_edited.png",
+    imageSrc: "editedDoughnutfruits/foo_doughnutfruit_blue_edited.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Cloud-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/tfo_ddY21_cloud_doughnutfruit-removebg-preview.png",
+    imageSrc: "editedDoughnutfruits/tfo_ddY21_cloud_doughnutfruit-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Coco-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/can_doughnutfruit_choco-removebg-preview.png",
+    imageSrc: "editedDoughnutfruits/can_doughnutfruit_choco-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Prickly-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_prickly-removebg-preview.png",
+    imageSrc: "editedDoughnutfruits/foo_doughnutfruit_prickly-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Strawberry-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/foo_doughnutfruit_strawberry-removebg-preview.png",
+    imageSrc: "editedDoughnutfruits/foo_doughnutfruit_strawberry-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Dung-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/tro_doughnutfruit_dung-removebg-preview.png",
+    imageSrc: "editedDoughnutfruits/tro_doughnutfruit_dung-removebg-preview.png",
     pointValue: -10,
     isGood: true,
   },
   {
     name: "Pineapple-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/tro_doughnutfruit_pineapple-removebg-preview.png",
+    imageSrc: "editedDoughnutfruits/tro_doughnutfruit_pineapple-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Sprinkle-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/tro_doughnutfruit_sprinkled-removebg-preview.png",
+    imageSrc: "editedDoughnutfruits/tro_doughnutfruit_sprinkled-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Green-Doughnutfruit",
     imageSrc:
-      "/editedDoughnutfruits/foo_doughnutfruit_green-removebg-preview.png",
+      "editedDoughnutfruits/foo_doughnutfruit_green-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Purple-Doughnutfruit",
     imageSrc:
-      "/editedDoughnutfruits/foo_doughnutfruit_purple-removebg-preview.png",
+      "editedDoughnutfruits/foo_doughnutfruit_purple-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Yellow-Doughnutfruit",
     imageSrc:
-      "/editedDoughnutfruits/foo_doughnutfruit_yellow-removebg-preview.png",
+      "editedDoughnutfruits/foo_doughnutfruit_yellow-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Grey-Doughnutfruit",
     imageSrc:
-      "/editedDoughnutfruits/foo_grey_doughnutfruit-removebg-preview.png",
+      "editedDoughnutfruits/foo_grey_doughnutfruit-removebg-preview.png",
     pointValue: 1,
     isGood: true,
   },
   {
     name: "Checkered-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/checkered_doughnutfruit_edited.png",
+    imageSrc: "editedDoughnutfruits/checkered_doughnutfruit_edited.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Grilled-Doughnutfruit",
     imageSrc:
-      "/editedDoughnutfruits/foo_grill_doughnutfruit-removebg-preview.png",
+      "editedDoughnutfruits/foo_grill_doughnutfruit-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Fish-Doughnutfruit",
     imageSrc:
-      "/editedDoughnutfruits/foo_doughnutfruit_fish-removebg-preview.png",
+      "editedDoughnutfruits/foo_doughnutfruit_fish-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Fire-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/fire_doughnutfruit_edited.png",
+    imageSrc: "editedDoughnutfruits/fire_doughnutfruit_edited.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Ice-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/ice_doughnutfruit-removebg-preview.png",
+    imageSrc: "editedDoughnutfruits/ice_doughnutfruit-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Sponge-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/sponge_doughnutfruit-removebg-preview.png",
+    imageSrc: "editedDoughnutfruits/sponge_doughnutfruit-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Tropical-Doughnutfruit",
-    imageSrc: "/editedDoughnutfruits/tropical_donutfruit-removebg-preview.png",
+    imageSrc: "editedDoughnutfruits/tropical_donutfruit-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Silver-Doughnutfruit",
     imageSrc:
-      "/editedDoughnutfruits/foo_doughnutfruit_silver-removebg-preview.png",
+      "editedDoughnutfruits/foo_doughnutfruit_silver-removebg-preview.png",
     pointValue: 3,
     isGood: true,
   },
   {
     name: "Gold-Doughnutfruit",
     imageSrc:
-      "/editedDoughnutfruits/foo_doughnutfruit_gold-removebg-preview.png",
+      "editedDoughnutfruits/foo_doughnutfruit_gold-removebg-preview.png",
     pointValue: 5,
     isGood: true,
   },
   {
     name: "Rainbow-Doughnutfruit",
     imageSrc:
-      "/editedDoughnutfruits/foo_doughnutfruit_rainbow-removebg-preview.png",
+      "editedDoughnutfruits/foo_doughnutfruit_rainbow-removebg-preview.png",
     pointValue: 10,
     isGood: true,
   },
   {
     name: "Dung",
-    imageSrc: "/Neopets-Doughnutfruits/Dung.webp",
+    imageSrc: "Neopets-Doughnutfruits/Dung.webp",
     isGood: false,
   },
   {
     name: "Dung1",
-    imageSrc: "/Neopets-Doughnutfruits/Dung.webp",
+    imageSrc: "Neopets-Doughnutfruits/Dung.webp",
     isGood: false,
   },
   {
     name: "Dung2",
-    imageSrc: "/Neopets-Doughnutfruits/Dung.webp",
+    imageSrc: "Neopets-Doughnutfruits/Dung.webp",
     isGood: false,
   },
   {
     name: "Dung3",
-    imageSrc: "/Neopets-Doughnutfruits/Dung.webp",
+    imageSrc: "Neopets-Doughnutfruits/Dung.webp",
     isGood: false,
   },
 ];
