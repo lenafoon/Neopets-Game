@@ -280,6 +280,7 @@ class Game {
     const neotitle = document.getElementById("inGame-container");
     const finalPoints = document.querySelector(".final-score-num");
     const dungEffect = document.getElementById("dung");
+    const startGamePoints = document.querySelector(".points");
     if (this.overlaps(playerRect, fruitRect)) {
       if (fruit.isGood) {
         bell.play();
@@ -292,7 +293,7 @@ class Game {
         gameOverScreen.style.display = "block";
         finalPoints.textContent = this.score;
         this.isGameOver = true;
-        getGamePoints.innerHTML = 0;
+        startGamePoints.innerHTML = 0;
 
 
         clearInterval(this.loop);
