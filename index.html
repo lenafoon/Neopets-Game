@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style/styles.css" />
+    <link rel="stylesheet" href="/style/mobile.css" />
 
     <title>Doughnutfruit Catcher</title>
   </head>
@@ -63,7 +64,7 @@
         </svg>
 
         <button class="start-game-btn">Start Game</button>
-        <button class="high-score">High-Score</button>
+        <button class="high-score">Current-Score</button>
       </div>
     </div>
     <div>
@@ -72,6 +73,36 @@
         <img class="inGame-img" src="Neopets-Doughnutfruits/inGameImage.png" />
         <div id="player-hasee"></div>
         <div id="fruits"></div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="left-btn"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="right-btn"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </div>
         <div class="score-table">
           <section class="neopoints"></section>
           <section class="points">0</section>
@@ -89,7 +120,7 @@
             class="neo-title score-title"
             src="Neopets-Doughnutfruits/bestTitle.png"
           />
-          <h1>Highest Score</h1>
+          <h1>Recent Score</h1>
           <table class="table">
             <tr>
               <!-- < class="tb-header">NAME -->
@@ -116,11 +147,8 @@
       <button class="back-menu">MAIN MENU</button>
     </div>
 
-    <!-- <script src="/js/script.js"></script> -->
     <script src="js/game.js"></script>
     <script src="js/player.js"></script>
     <script src="js/script.js"></script>
-
-    <!-- <script src="/js/game.js"></script> -->
   </body>
 </html>

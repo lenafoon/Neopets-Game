@@ -1,0 +1,84 @@
+@media screen and (max-width: 421px) {
+  #intro-screen {
+    width: 400px;
+  }
+
+  .intro-image {
+    width: 400px;
+    height: 620px;
+    /* height: 700px; */
+  }
+
+  .high-score {
+    font-size: 20px;
+    font-family: "Montserrat";
+    background-image: linear-gradient(
+      45deg,
+      rgba(98, 0, 255, 0.815),
+      rgba(251, 206, 6, 0.995)
+    );
+    background-color: rgb(180, 58, 180);
+    position: absolute;
+    bottom: 17px;
+    right: 0px;
+    padding: 6px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid rgb(248, 251, 248);
+    transition: all 0.8s;
+  }
+  .start-game-btn {
+    font-size: 20px;
+    font-family: "Montserrat";
+    background-image: linear-gradient(
+      45deg,
+      rgba(251, 206, 6, 0.995),
+      rgba(98, 0, 255, 0.815)
+    );
+    position: absolute;
+    bottom: 17px;
+    left: 1px;
+    padding: 6px 32px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid rgb(244, 245, 244);
+    transition: all 0.8s;
+  }
+  .title {
+    width: 200px;
+    bottom: 510px;
+    position: absolute;
+    border: 8px solid rgb(142, 62, 62);
+    border-radius: 8px;
+    right: 100px;
+    box-shadow: 5px 4px 5px 8px rgba(5, 5, 5, 0.809);
+    background-color: rgb(174, 162, 184);
+    background-image: linear-gradient(
+      45deg,
+      rgb(252, 252, 252),
+      rgb(63, 157, 152)
+    );
+  }
+  .left-btn {
+    width: 45px;
+    position: absolute;
+    bottom: 5px;
+
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.227);
+    padding: 1px 12px;
+  }
+  .right-btn {
+    cursor: pointer;
+    position: absolute;
+    width: 45px;
+    right: 5px;
+    bottom: 5px;
+    padding: 1px 12px;
+    background-color: rgba(255, 255, 255, 0.227);
+  }
+}

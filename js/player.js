@@ -1,7 +1,7 @@
 class Player {
   constructor() {
-    this.w = 140;
-    this.h = 170;
+    this.w = 110;
+    this.h = 140;
     this.x = 210;
     this.y = 10;
     this.dom = document.getElementById("player-hasee");
@@ -14,15 +14,31 @@ class Player {
   }
 }
 
+const leftArrow = document.querySelector(".left-btn");
+const rightArrow = document.querySelector(".right-btn");
+
 const player = new Player();
 console.log(player);
 const update = () => {
   player.dom.style.left = `${player.x}px`;
-  //console.log(player.x);
 
   // requestAnimationFrame(update);
 };
 setInterval(update, 1000 / 30);
+
+leftArrow.addEventListener("click", () => {
+  if (player.x > -30) {
+    player.x -= 20;
+  }
+  console.log(1);
+});
+rightArrow.addEventListener("click", () => {
+  if (player.x < 280) {
+    player.x += 20;
+  }
+  console.log(1);
+});
+
 // update();
 window.addEventListener(
   "keydown",
@@ -39,7 +55,7 @@ window.addEventListener(
         console.log(1);
         break;
       case "ArrowRight":
-        if (player.x < 370) {
+        if (player.x < 280) {
           player.x += 20;
         }
         console.log(2);

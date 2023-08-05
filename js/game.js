@@ -4,15 +4,10 @@ class Doughnutfruit {
     this.imageSrc = imageSrc;
     this.pointValue = pointValue;
     this.isGood = isGood;
-    this.speed = this.calculateSpeed();
-    this.x = Math.random() * (496 - 80);
-    this.y = 200;
-    this.element = this.createImageElement();
-    // this.fruits = fruits.style.top = `${fruit.y}px`;
-  }
 
-  calculateSpeed() {
-    return Math.floor(8 / this.pointValue) + 1;
+    this.x = Math.random() * (400 - 80);
+    this.y = 180;
+    this.element = this.createImageElement();
   }
 
   createImageElement() {
@@ -39,43 +34,50 @@ const doughnutfruitsData = [
   },
   {
     name: "Cloud-Doughnutfruit",
-    imageSrc: "editedDoughnutfruits/tfo_ddY21_cloud_doughnutfruit-removebg-preview.png",
+    imageSrc:
+      "editedDoughnutfruits/tfo_ddY21_cloud_doughnutfruit-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Coco-Doughnutfruit",
-    imageSrc: "editedDoughnutfruits/can_doughnutfruit_choco-removebg-preview.png",
+    imageSrc:
+      "editedDoughnutfruits/can_doughnutfruit_choco-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Prickly-Doughnutfruit",
-    imageSrc: "editedDoughnutfruits/foo_doughnutfruit_prickly-removebg-preview.png",
+    imageSrc:
+      "editedDoughnutfruits/foo_doughnutfruit_prickly-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Strawberry-Doughnutfruit",
-    imageSrc: "editedDoughnutfruits/foo_doughnutfruit_strawberry-removebg-preview.png",
+    imageSrc:
+      "editedDoughnutfruits/foo_doughnutfruit_strawberry-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Dung-Doughnutfruit",
-    imageSrc: "editedDoughnutfruits/tro_doughnutfruit_dung-removebg-preview.png",
+    imageSrc:
+      "editedDoughnutfruits/tro_doughnutfruit_dung-removebg-preview.png",
     pointValue: -10,
     isGood: true,
   },
   {
     name: "Pineapple-Doughnutfruit",
-    imageSrc: "editedDoughnutfruits/tro_doughnutfruit_pineapple-removebg-preview.png",
+    imageSrc:
+      "editedDoughnutfruits/tro_doughnutfruit_pineapple-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
   {
     name: "Sprinkle-Doughnutfruit",
-    imageSrc: "editedDoughnutfruits/tro_doughnutfruit_sprinkled-removebg-preview.png",
+    imageSrc:
+      "editedDoughnutfruits/tro_doughnutfruit_sprinkled-removebg-preview.png",
     pointValue: 2,
     isGood: true,
   },
@@ -196,8 +198,11 @@ const doughnutfruitsData = [
 
 class Game {
   constructor() {
-    this.w = 496;
+    this.w = 400;
     this.h = 656;
+    this.baseWidth = 380;
+    this.maxScaleWidth = Math.min(this.w, window.innerWidth);
+    this.scaleFactor = this.maxScaleWidth / this.baseWidth;
     this.inGameScreen = document.querySelector(".inGame-img");
     this.inGameScreen.style.width = `${this.w}px`;
     this.inGameScreen.style.height = `${this.h}px`;
@@ -241,10 +246,6 @@ class Game {
     }, this.spawnFruitsInterval / 60);
   }
 
-  calculateSpeed() {
-    return Math.floor(8 / this.pointValue) + 1;
-  }
-
   calculateFruitSpeed() {
     const speedIncreaseFactor = Math.floor(this.score / 15);
     return this.baseFruitSpeed + speedIncreaseFactor * this.fruitSpeedIncrease;
@@ -253,7 +254,6 @@ class Game {
   gameLoop() {
     if (!this.isGameOver) {
       this.update();
-      //console.log(this.fruits);
 
       this.animationFrame = requestAnimationFrame(() => this.gameLoop());
     }
@@ -261,7 +261,7 @@ class Game {
 
   isOutOfBounds(fruit) {
     console.log(this.h);
-    return fruit.y > 810;
+    return fruit.y > 770;
   }
 
   handleOutofBounds(fruit) {
@@ -294,7 +294,6 @@ class Game {
         finalPoints.textContent = this.score;
         this.isGameOver = true;
         startGamePoints.innerHTML = 0;
-
 
         clearInterval(this.loop);
         cancelAnimationFrame(this.animationFrame);
